@@ -1,0 +1,9 @@
+project: nokogiri
+target: parse_fuzzer
+cmds:
+  - cmd: /mayhem/parse_fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/parse_fuzzer.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/parse_fuzzer/testsuite
